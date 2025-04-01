@@ -1,0 +1,9 @@
+@charset "utf-8";
+@use "../common/variables" as *;
+@use "../common/functions" as *;
+@use "../common/mixins" as *;
+@use "../common/global" as *;
+
+.header {
+  color: yellow;
+}
