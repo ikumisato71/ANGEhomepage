@@ -3,30 +3,28 @@
 @use "mixins" as *;
 
 html {
-	// pc,sp共通
-	font-size: 1.6667vw;
+  // pc,sp共通
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  width: 100%;
 }
 
 body {
-	font-family: $noto-sans;
-	font-size: vw(16);
-	line-height: 1.8;
-	letter-spacing: 0;
-
-	@include sp() {
-		font-size: vw_sp(13);
-	}
+  font-family: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", sans-serif, Verdana, "メイリオ", "Meiryo",
+    "MS Ｐゴシック", "MS PGothic", Sans-Serif;
+  color: $color-base-black;
+  line-height: 1.8;
 }
 
 img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
-svg {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: auto;
+.section__padding {
+  padding: vh(180) vw(170) 0 vw(170);
+  @include sp() {
+    padding: vh_sp(100) vw_sp(20) 0 vw_sp(20);
+  }
 }
