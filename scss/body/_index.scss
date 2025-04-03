@@ -61,8 +61,8 @@ header {
   --transition: 0.8s var(--easing);
   --color-base: #f8f8f8;
   --color-gray: #ddd;
-  --color-theme: #f5695f;
-  --color-theme-darken: #f12617;
+  // --color-theme: #f5695f;
+  // --color-theme-darken: #f12617;
   --box-shadow: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05),
     -0.8rem -0.8rem 1.2rem #fff;
   --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.08),
@@ -74,8 +74,8 @@ header {
 }
 
 html {
-  font-family: "Spartan", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
-    "メイリオ", Meiryo, sans-serif;
+  // font-family: "Spartan", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+  //   "メイリオ", Meiryo, sans-serif;
   // font-size: 62.5%;
   // line-height: 1.8;
   // height: 100%;
@@ -473,7 +473,6 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; /* 画像を要素内に収める */
-  text-align: center;
   /* 文字を中央揃え */
   display: flex;
   flex-direction: column; /* 縦方向に並べる */
@@ -481,20 +480,33 @@ main {
   align-items: center; /* 横方向の中央揃え */
   padding: 20px; /* 余白（必要に応じて調整） */
 }
+.about-text {
+  width: vw(426);
+  height: vh(234);
+  text-align: left;
+  margin-top: vh(20);
+}
 .about__inner--right {
   width: 50%;
 }
 .about__box-end {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
+  margin-top: vh(80);
 }
 .about__box-end img {
   width: 30%;
 }
 .about__box-end > .linking-img {
-  width: 20%;
+  width: 10%;
+}
+// ------
+// product
+// ------
+#product {
+  padding-top: vh(180);
 }
 // swiperここから
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
@@ -752,4 +764,74 @@ main {
 }
 .exhibition__container img {
   width: 30%;
+}
+/* ----------------------
+COMPANY
+---------------------- */
+.company-container {
+  display: flex;
+  justify-content: space-between;
+}
+/* ----------------------
+お問い合わせ　トップ
+---------------------- */
+#contact {
+  margin: 80px auto;
+}
+.contact-btn {
+  width: 50%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+  font-size: 18px;
+}
+
+.contact-btn:hover {
+  color: #fff;
+  background: #000;
+}
+.index-h2-contact {
+  font-size: 36px;
+  margin-top: 150px;
+  /* 左右いっぱいに伸びた横線 */
+  align-items: center; /* 横線を上下中央 */
+  display: flex; /* 文字と横線を横並び */
+}
+.index-h2-contact::before,
+.index-h2-contact::after {
+  background-color: #1c1c1d; /* 横線の色 */
+  border-radius: 1px; /* 横線の両端を丸く */
+  content: "";
+  flex-grow: 1; /* 横幅いっぱい */
+  height: 1px; /* 横線の高さ */
+}
+.index-h2-contact::before {
+  margin-right: 15px; /* 文字との余白 */
+}
+.index-h2-contact::after {
+  margin-left: 15px; /* 文字との余白 */
+}
+.index-h3-contact {
+  text-align: center;
+}
+// -------
+// footer
+// -------
+footer {
+  width: 100%;
+  height: vh(225);
+  background-image: url("../image/footer_img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* 画像を要素内に収める */
+  text-align: center;
+}
+.footer__logo-img {
+  width: 10%;
 }
