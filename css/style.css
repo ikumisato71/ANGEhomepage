@@ -430,6 +430,19 @@ img {
   font-weight: 200;
 }
 
+.product__title {
+  font-family: "Source Serif 4", serif;
+  font-size: 4.4444444444vw;
+  font-weight: 200;
+  margin-left: 12.5vw;
+}
+
+.contact__title {
+  font-family: "Source Serif 4", serif;
+  font-size: 4.4444444444vw;
+  font-weight: 200;
+}
+
 header {
   position: fixed; /* 固定配置 */
   top: 0; /* ページ上部に固定 */
@@ -515,34 +528,6 @@ img {
 
 figure {
   margin: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
 }
 
 main {
@@ -709,16 +694,21 @@ main {
 }
 
 .mv02 .slide-title {
-  font-size: 6rem;
-  line-height: 1.1;
-  color: var(--color-theme);
+  color: #000000;
+  font-family: "Source Serif 4", serif;
+  font-size: 4.4444444444vw;
+  font-weight: 300;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .mv02 .slide-text {
   font-size: 1.8rem;
   margin: 4rem 0;
   animation-delay: 0.2s;
-  color: #fff;
+  color: #000000;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .mv02 .slide-link {
@@ -1141,7 +1131,7 @@ COMPANY
 contact
 ---------------------- */
 #contact {
-  margin: 9.8765432099vh auto;
+  margin: 12.3456790123vh auto;
   text-align: center;
 }
 

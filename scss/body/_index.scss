@@ -117,33 +117,33 @@ figure {
   margin: 0;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
+// p {
+//   margin: 0;
+//   padding: 0;
+// }
 
-a {
-  text-decoration: none;
-  color: #333;
-}
+// a {
+//   text-decoration: none;
+//   color: #333;
+// }
 
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+// ul,
+// ol {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-size: 1.6rem;
+//   margin: 0;
+//   padding: 0;
+// }
 
 main {
   display: block;
@@ -295,6 +295,7 @@ main {
   -webkit-transform: translateX(-1.5%) scale(1.1);
   transform: translateX(-1.5%) scale(1.1);
 }
+
 .mv02 .slide-title,
 .mv02 .slide-text,
 .mv02 .slide-link {
@@ -302,17 +303,21 @@ main {
   animation: 2s var(--easing) both;
   opacity: 0;
 }
+
 .mv02 .slide-title {
-  font-size: 6rem;
-  line-height: 1.1;
-  color: var(--color-theme);
+  color: $color-base-black;
+  font-family: "Source Serif 4", serif;
+  font-size: vw(64);
+  font-weight: 300;
+  backdrop-filter: blur(3px);
 }
 .mv02 .slide-text {
   font-size: 1.8rem;
   margin: 4rem 0;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
-  color: #fff;
+  color: $color-base-black;
+  backdrop-filter: blur(3px);
 }
 .mv02 .slide-link {
   -webkit-animation-delay: 0.4s;
@@ -782,7 +787,7 @@ COMPANY
 contact
 ---------------------- */
 #contact {
-  margin: vh(80) auto;
+  margin: vh(100) auto;
   text-align: center;
 }
 .contact-btn {
