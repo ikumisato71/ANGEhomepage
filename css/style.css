@@ -1129,11 +1129,20 @@ COMPANY
   justify-content: space-between;
 }
 
+.company__profile {
+  width: 50%;
+}
+
+.company__map {
+  width: 50%;
+}
+
 /* ----------------------
-お問い合わせ　トップ
+contact
 ---------------------- */
 #contact {
-  margin: 80px auto;
+  margin: 9.8765432099vh auto;
+  text-align: center;
 }
 
 .contact-btn {
@@ -1147,7 +1156,7 @@ COMPANY
   border: 2px solid #000;
   border-radius: 0;
   background: #fff;
-  font-size: 18px;
+  font-size: 1.25vw;
 }
 
 .contact-btn:hover {
@@ -1194,6 +1203,14 @@ footer {
   text-align: center;
 }
 
+#footer__logo {
+  padding-top: 9.8765432099vh;
+}
+
 .footer__logo-img {
   width: 10%;
+}
+
+.copyright {
+  margin-top: 8.6419753086vh;
 }/*# sourceMappingURL=style.css.map */
