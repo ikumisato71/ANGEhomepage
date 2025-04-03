@@ -10,15 +10,14 @@ header {
   top: 0; /* ページ上部に固定 */
   left: 0;
   width: 100%; /* 横幅いっぱいに広げる */
-  height: 80px; /* ヘッダーの高さ（適宜調整） */
+  height: vh(80); /* ヘッダーの高さ（適宜調整） */
   backdrop-filter: blur(8px);
-
-  // background: rgba(0, 0, 0, 0.7); /* 背景を半透明の黒に */
-  color: white; /* 文字色を白に */
+  color: $color-base-black;
   display: flex;
   align-items: center; /* 縦中央揃え */
   justify-content: space-between; /* ロゴとナビを左右に配置 */
-  padding: 0 20px;
+  padding: 0 vw(20);
+
   z-index: 1000; /* メインビジュアルより前面に */
 }
 
@@ -34,24 +33,28 @@ header {
 
 .nav__list {
   display: flex;
+  gap: vw(40);
   list-style: none;
 }
 
 .nav__list__item {
-  margin-left: 20px; /* ナビの間隔を確保 */
+  // margin-left: 20px; /* ナビの間隔を確保 */
 }
 
 .nav__list__item-link {
-  color: white;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: vw(20);
+  font-weight: 400;
+  padding: vw(10);
   transition: color 0.3s;
 }
 
 .nav__list__item-link:hover {
-  color: #f0a500; /* ホバー時にカラー変更 */
+  color: $color-base-white; /* ホバー時にカラー変更 */
 }
+// -------
+// swiper
+// -------
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
 :root {
   --easing: cubic-bezier(0.2, 1, 0.2, 1);
@@ -73,20 +76,20 @@ header {
 html {
   font-family: "Spartan", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
     "メイリオ", Meiryo, sans-serif;
-  font-size: 62.5%;
-  line-height: 1.8;
-  height: 100%;
+  // font-size: 62.5%;
+  // line-height: 1.8;
+  // height: 100%;
   word-break: break-word;
-  color: #333;
+  // color: #333;
   background-color: var(--color-base);
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
-  font-size: 1.6rem;
-  margin: 0;
-}
+// body {
+//   font-size: 1.6rem;
+//   margin: 0;
+// }
 
 *,
 *::before,
@@ -450,4 +453,303 @@ main {
   .sp {
     display: none !important;
   }
+}
+// --------
+// about
+// --------
+.about__container {
+}
+.about__box-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: vw(100);
+}
+.about__inner-left {
+  width: vw(780);
+  height: vh(608);
+  background-image: url("../image/about_knit.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* 画像を要素内に収める */
+  text-align: center;
+  /* 文字を中央揃え */
+  display: flex;
+  flex-direction: column; /* 縦方向に並べる */
+  justify-content: center; /* 縦方向の中央揃え */
+  align-items: center; /* 横方向の中央揃え */
+  padding: 20px; /* 余白（必要に応じて調整） */
+}
+.about__inner--right {
+  width: 50%;
+}
+.about__box-end {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about__box-end img {
+  width: 30%;
+}
+.about__box-end > .linking-img {
+  width: 20%;
+}
+// swiperここから
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap");
+:root {
+  --easing: cubic-bezier(0.2, 1, 0.2, 1);
+  --transition: 0.8s var(--easing);
+  --color-base: #f8f8f8;
+  --color-gray: #ddd;
+  --color-theme: #f5695f;
+  --color-theme-darken: #f12617;
+  --box-shadow: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05),
+    -0.8rem -0.8rem 1.2rem #fff;
+  --box-shadow-hover: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.08),
+    -1rem -1rem 1.5rem #fff;
+  --box-shadow-inset: inset 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.05),
+    inset -0.8rem -0.8rem 1.2rem #fff;
+  --box-shadow-dark: 0.8rem 0.8rem 1.2rem rgba(0, 0, 0, 0.1),
+    -0.8rem -0.8rem 1.2rem rgba(#fff, 0.2);
+}
+
+html {
+  height: 100%;
+  word-break: break-word;
+  color: #333;
+  background-color: var(--color-base);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: var(--color-theme);
+}
+
+::selection {
+  color: #fff;
+  background: var(--color-theme);
+}
+
+main {
+  display: block;
+}
+
+.l-inner {
+  position: relative;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10rem;
+}
+
+.l-section {
+  border-top: 1px solid #eee;
+}
+.l-section .l-inner {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+[class*="swiper"]:focus {
+  outline: none;
+}
+
+.slide-media,
+.thumb-media {
+  position: relative;
+  overflow: hidden;
+}
+.slide-media img,
+.thumb-media img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: grid;
+  place-content: center;
+  width: 6.4rem;
+  height: 6.4rem;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border-radius: 50%;
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  width: 1.2rem;
+  height: 1.2rem;
+  content: "";
+  border: solid var(--color-gray);
+  border-width: 3px 3px 0 0;
+}
+.swiper-button-prev::after {
+  margin-left: 0.4rem;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.swiper-button-next::after {
+  margin-right: 0.4rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+.slide-title {
+  color: $color-base-white;
+}
+.gallery03 {
+  // margin-bottom: 16rem;
+}
+.gallery03 .l-inner {
+  padding-bottom: 0;
+}
+.gallery03 .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.gallery03 .swiper-slide {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.gallery03 .slide {
+  width: var(--slide-width);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  --slide-width: 200px;
+}
+.gallery03 .slide-media {
+  height: var(--slide-width);
+}
+.gallery03 .slide-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 3.2rem 1.6rem 1.6rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  opacity: 0;
+  color: #fff;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    color-stop(50%, rgba(0, 0, 0, 0.3))
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 50%
+  );
+}
+.gallery03 .slide-title {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.gallery03 .slide:hover {
+  width: calc(var(--slide-width) * 1.5);
+}
+.gallery03 .slide:hover .slide-content {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  .l-inner {
+    padding: 0 4rem;
+  }
+  .pc {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  html {
+    font-size: 50%;
+  }
+  .pc-tab {
+    display: none !important;
+  }
+  .gallery03 {
+    margin-bottom: 8rem;
+  }
+  .gallery03 .slide {
+    --slide-width: 120px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .tab-sp {
+    display: none !important;
+  }
+  .swiper-button-prev::before,
+  .swiper-button-next::before {
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+  }
+  .swiper-button-prev:hover::before,
+  .swiper-button-next:hover::before {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sp {
+    display: none !important;
+  }
+}
+// swiperここまで
+
+// -------
+// exhibition
+// -------
+.exhibition__container {
+  display: flex;
+  gap: vw(20);
+}
+.exhibition__container img {
+  width: 30%;
 }
