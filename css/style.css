@@ -480,7 +480,7 @@ header {
 }
 
 .nav__list__item-link:hover {
-  color: #ffffff; /* ホバー時にカラー変更 */
+  color: #c0c0c0; /* ホバー時にカラー変更 */
 }
 
 :root {
