@@ -1317,4 +1317,27 @@ details > div > span {
 .contact-btn_send:hover {
   color: #fff;
   background: #000;
+}
+
+.about_business-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3.4722222222vw;
+}
+
+.about_business-inner {
+  width: 30%;
+}
+
+.page__about-strengths {
+  width: 100%;
+}
+
+.about_strengths-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about_strengths-inner {
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
