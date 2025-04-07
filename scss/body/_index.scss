@@ -5,7 +5,7 @@
 @use "../common/global" as *;
 
 /* ヘッダーを固定し、メインビジュアルの上に表示 */
-header {
+.index_header {
   position: fixed; /* 固定配置 */
   top: 0; /* ページ上部に固定 */
   left: 0;
